@@ -186,7 +186,7 @@ export default function Home() {
       <section className="bg-[#161513]/70 px-[5%] py-12 text-white w-full flex flex-col gap-6">
         <h1 className="font-semibold text-3xl">Any Questions? Hit me up!</h1>
         <p className="text-[#C5C5C5]">
-          I'm open for any possible collaborations within my expertise. I'm also
+          {"I'm"} open for any possible collaborations within my expertise. {"I'm"} also
           open for new opportunities towards my career development. If you have
           any questions or just want to say hi, feel free to contact me!
         </p>
