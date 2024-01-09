@@ -2,26 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.text-gradient {
+  background: var(
+    --Primary-Gradient,
+    linear-gradient(116deg, #ff8660 71.79%, #9a33ff 95.51%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.project {
+  background: var(
+    --Orange-Gradient,
+    linear-gradient(180deg, #ff8660 0%, #d5491d 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-stack {
+  background: linear-gradient(
+    180deg,
+    rgb(137, 114, 114) 0%,
+    rgba(0, 0, 0, 0.18) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Add these styles to your CSS or Tailwind CSS file */
+.image-container {
+  overflow: hidden;
+}
+
+.image-container:hover img {
+  animation: scrollAnimation 5s linear forwards; /* Adjust the duration as needed */
+}
+
+@keyframes scrollAnimation {
+  to {
+    transform: translateY(
+      calc(-100% + 301px)
+    ); /* Adjust the value based on the image height */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.experience {
+  background: var(
+    --Blue-Gradient,
+    linear-gradient(180deg, #5badff 0%, #1373d1 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,113 +1,217 @@
-import Image from 'next/image'
+import Image from "next/image";
+import {
+  FaAws,
+  FaCloud,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaNode,
+  FaPython,
+  FaReact,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaBook } from "react-icons/fa";
+import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
+import {
+  SiMongodb,
+  SiPostgresql,
+  SiPostman,
+  SiPrisma,
+  SiTypescript,
+} from "react-icons/si";
+import ProjectCard from "@/components/ProjectCard";
+import Experience from "@/components/Experience";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div>
+      <div className="bg-[#161513] text-white flex flex-col gap-24 items-center px-[5%]">
+        <section className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-8">
+          <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={"/iyal.jpg"}
+              fill={true}
+              alt="profile"
+              className="object-cover w-full h-full"
             />
-          </a>
-        </div>
+          </div>
+
+          <h2 className="text-2xl lg:text-4xl font-semibold text-center">
+            Hello 👋, My Name is <br />
+            <span className="text-gradient">Mochamad Syahrial Alzaidan</span>
+          </h2>
+
+          <p className="text-[#C5C5C5] text-sm md:text-base text-center">
+            I am an undergraduate{" "}
+            <span className="project">
+              Information System and Technology student{" "}
+            </span>
+            in{" "}
+            <span className="experience">Bandung Institute of Technology</span>{" "}
+            who is highly passionate in software engineering, project management
+            and data. He has a high determination to success and really loves
+            learning new things.
+          </p>
+
+          <div className="flex gap-4 text-[#C5C5C5] text-3xl md:text-4xl cursor-pointer">
+            <Link
+              href="https://www.linkedin.com/in/mochamadsyahrialalzaidan/"
+              target="_blank"
+            >
+              <FaLinkedin className="hover:scale-110" />
+            </Link>
+
+            <Link href="https://github.com/syahrialalzaidan" target="_blank">
+              <FaGithub className="hover:scale-110" />
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/syahrialzaidan/"
+              target="_blank"
+            >
+              <FaInstagram className="hover:scale-110" />
+            </Link>
+          </div>
+
+          <div className="flex gap-4">
+            <a
+              href="https://drive.google.com/file/d/1zSvh6ha7RvKSnIhRkHxbPDxAbCHEjZBY/view?usp=sharing"
+              target="_blank"
+              className="px-7 flex items-center justify-center py-4 text-black bg-white hover:text-white border hover:border-white hover:bg-transparent rounded-full"
+            >
+              <FaBook className="inline-block mr-2" />
+              See My Resume
+            </a>
+          </div>
+        </section>
+
+        {/* tech stack */}
+        <section className="flex flex-col gap-6 items-center w-full">
+          <h1 className="text-[#C5C5C5] text-xl">EXPERIENCED WITH</h1>
+          <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-12">
+            <TbBrandNextjs className="text-6xl tech-stack hover:scale-110" />
+            <FaReact className="text-6xl tech-stack hover:scale-110" />
+            <TbBrandTailwind className="text-6xl hover:scale-110 tech-stack" />
+            <SiPostgresql className="text-6xl hover:scale-110 tech-stack" />
+            <FaAws className="text-6xl tech-stack hover:scale-110" />
+            <SiTypescript className="text-6xl tech-stack hover:scale-110" />
+            <FaNode className="text-6xl tech-stack hover:scale-110" />
+            <SiPostman className="text-6xl tech-stack hover:scale-110" />
+            <SiMongodb className="text-6xl tech-stack hover:scale-110" />
+            <SiPrisma className="text-6xl tech-stack hover:scale-110" />
+            <FaCloud className="text-6xl tech-stack hover:scale-110" />
+            <FaPython className="text-6xl tech-stack hover:scale-110" />
+          </div>
+        </section>
+
+        {/* projects */}
+        <section className="w-full flex flex-col gap-8">
+          <h1 className="project font-bold text-center text-3xl md:text-4xl">
+            PROJECTS
+          </h1>
+
+          <div className="mb-8 flex flex-wrap items-center gap-10 justify-center">
+            <ProjectCard
+              name="Klugee"
+              image="/klugee.png"
+              link="https://klugee.co.id/"
+              description="A platform for you to find the best tutor for your children. Created the promotional, admin and course website of the company"
+            />
+
+            <ProjectCard
+              name="Bersama Ashwa"
+              image="/ashwa.png"
+              link="https://bersamaashwa.com/"
+              description="Mental Health Service that could help you to know about yourself."
+            />
+
+            <ProjectCard
+              name="Danain"
+              image="/danain.png"
+              link="https://danain.site/"
+              description="Danain is a website platform that allows investors and startup companies to meet. We believe innovation should get the funding it deserves, and we will facilitate its journey."
+            />
+
+            <ProjectCard
+              name="Help Pals Therapy"
+              image="/help-pals.png"
+              link="https://helppalstherapy.com/"
+              description="Help Pals Therapy is a platform that helps you control your mental health by monitoring your emotion day by day. Also, it could assess your mental health condition and give you a recommendation to improve your mental health."
+            />
+
+            <ProjectCard
+              name="Wisata Karangsalam Lor"
+              image="/desa.png"
+              link="https://wisatakarangsalam.com/"
+              description="Wisata Karangsalam Lor is a website that helps you to know more about Karangsalam Lor Village. It also helps you to book a homestay and get to know the village better."
+            />
+          </div>
+        </section>
+
+        {/* experience */}
+        <section className="w-full flex flex-col gap-8 mb-20">
+          <h1 className="experience font-bold text-center text-3xl md:text-4xl">
+            EXPERIENCE
+          </h1>
+          <Experience
+            title="Software Engineer at Inkubator IT"
+            date="Mar 2023 - Present"
+            logo="/iit.png"
+            description="I've completed five website development projects for external clients and stakeholders in collaboration with fellow developers. These projects spanned diverse domains, addressing needs in mental health, village services, dormitories, and English language courses. I was entrusted by the IT Incubator of the HMIF ITB, overseeing projects with a cumulative value exceeding ±50 million Indonesian Rupiah."
+          />
+
+          <Experience
+            title="Software Engineer at BIST League 6.0"
+            date="Jul 2023 - Nov 2023"
+            logo="/bislig.png"
+            description="I collaborated with a team of 5 developers to design and build a competition-focused website, taking on the role of a full-stack developer. My responsibilities included implementing various features crucial for competition needs, such as registration, team creation, and dashboard functionalities. By leveraging my skills across the entire development stack, we successfully delivered a comprehensive web solution tailored to meet the specific requirements of the competition."
+          />
+
+          <Experience
+            title="Frontend Developer Intern at Wesclic Indonesia Neotech"
+            date="Jan 2023 - Apr 2023"
+            logo="/wesclic.png"
+            description=" I collaborated with a team of 5 developers to create a website for
+          clients, where I played a key role in developing a middleware to
+          seamlessly integrate the frontend with the backend of the company's
+          site. Utilizing Next.js and Tailwind CSS, I successfully translated
+          Figma designs into code, ensuring a cohesive and visually appealing user
+          experience."
+          />
+        </section>
       </div>
+      {/* footer */}
+      <section className="bg-[#161513]/70 px-[5%] py-12 text-white w-full flex flex-col gap-6">
+        <h1 className="font-semibold text-3xl">Any Questions? Hit me up!</h1>
+        <p className="text-[#C5C5C5]">
+          I'm open for any possible collaborations within my expertise. I'm also
+          open for new opportunities towards my career development. If you have
+          any questions or just want to say hi, feel free to contact me!
+        </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+        <Link
+          href="mailto:syahrialalzaidan@gmail.com"
           target="_blank"
-          rel="noopener noreferrer"
+          className="flex gap-4"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <MdOutlineEmail className="inline-block mr-2 text-2xl" />
+          <p>syahrialalzaidan@gmail.com</p>
+        </Link>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+        <Link
+          href="https://wa.me/6281286320826"
           target="_blank"
-          rel="noopener noreferrer"
+          className="flex gap-4"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <FaWhatsapp className="inline-block mr-2 text-2xl" />
+          <p>+62 812 8632 0826</p>
+        </Link>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <div className="h-[1px] bg-white w-full mt-4"></div>
+        <p className="text-center">© Mochamad Syahrial Alzaidan 2024</p>
+      </section>
+    </div>
+  );
 }
