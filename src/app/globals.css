@@ -12,6 +12,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+.title-gradient {
+  background: var(
+    --Primary-Gradient,
+    linear-gradient(116deg, #9a33ff 45.51%, #ff8660 71.79%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .project {
   background: var(
     --Orange-Gradient,

@@ -6,14 +6,16 @@ import {
   FaInstagram,
   FaLinkedin,
   FaNode,
+  FaPhp,
   FaPython,
   FaReact,
   FaWhatsapp,
 } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
-import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
+import { TbBrandGolang, TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 import {
+  SiCockroachlabs,
   SiMongodb,
   SiPostgresql,
   SiPostman,
@@ -27,8 +29,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <div className="bg-[#161513] text-white flex flex-col gap-24 items-center px-[5%]">
-        <section className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-8">
+      <div className="bg-[#161513] text-white lg:py-6 flex flex-col gap-24 items-center px-[5%]">
+        <section
+          id="about"
+          className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
+        >
           <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
               src={"/iyal.jpg"}
@@ -45,11 +50,11 @@ export default function Home() {
 
           <p className="text-[#C5C5C5] text-sm md:text-base text-center">
             I am an undergraduate{" "}
-            <span className="project">
-              Information System and Technology student{" "}
-            </span>
-            in{" "}
-            <span className="experience">Bandung Institute of Technology</span>{" "}
+            <span className="project">Information System and Technology </span>
+            student in{" "}
+            <span className="experience">
+              Bandung Institute of Technology
+            </span>{" "}
             who is highly passionate in software engineering, project management
             and data. He has a high determination to success and really loves
             learning new things.
@@ -88,12 +93,15 @@ export default function Home() {
         </section>
 
         {/* tech stack */}
-        <section className="flex flex-col gap-6 items-center w-full">
+        <section id="tech" className="flex flex-col gap-6 items-center w-full">
           <h1 className="text-[#C5C5C5] text-xl">EXPERIENCED WITH</h1>
           <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-12">
             <TbBrandNextjs className="text-6xl tech-stack hover:scale-110" />
             <FaReact className="text-6xl tech-stack hover:scale-110" />
             <TbBrandTailwind className="text-6xl hover:scale-110 tech-stack" />
+            <TbBrandGolang className="text-6xl hover:scale-110 tech-stack" />
+            <FaPhp className="text-6xl hover:scale-110 tech-stack" />
+            <SiCockroachlabs className="text-6xl hover:scale-110 tech-stack" />
             <SiPostgresql className="text-6xl hover:scale-110 tech-stack" />
             <FaAws className="text-6xl tech-stack hover:scale-110" />
             <SiTypescript className="text-6xl tech-stack hover:scale-110" />
@@ -107,7 +115,7 @@ export default function Home() {
         </section>
 
         {/* projects */}
-        <section className="w-full flex flex-col gap-8">
+        <section id="project" className="w-full flex flex-col gap-8">
           <h1 className="project font-bold text-center text-3xl md:text-4xl">
             PROJECTS
           </h1>
@@ -151,7 +159,7 @@ export default function Home() {
         </section>
 
         {/* experience */}
-        <section className="w-full flex flex-col gap-8 mb-20">
+        <section id="experience" className="w-full flex flex-col gap-8 mb-20">
           <h1 className="experience font-bold text-center text-3xl md:text-4xl">
             EXPERIENCE
           </h1>
@@ -182,13 +190,18 @@ export default function Home() {
           />
         </section>
       </div>
+
       {/* footer */}
-      <section className="bg-[#161513]/70 px-[5%] py-12 text-white w-full flex flex-col gap-6">
+      <section
+        id="contact"
+        className="bg-[#161513]/70 px-[5%] py-12 text-white w-full flex flex-col gap-6"
+      >
         <h1 className="font-semibold text-3xl">Any Questions? Hit me up!</h1>
         <p className="text-[#C5C5C5]">
-          {"I'm"} open for any possible collaborations within my expertise. {"I'm"} also
-          open for new opportunities towards my career development. If you have
-          any questions or just want to say hi, feel free to contact me!
+          {"I'm"} open for any possible collaborations within my expertise.{" "}
+          {"I'm"} also open for new opportunities towards my career development.
+          If you have any questions or just want to say hi, feel free to contact
+          me!
         </p>
 
         <Link

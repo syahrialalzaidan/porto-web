@@ -15,9 +15,12 @@ export default function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="w-[350px] h-[500px] hover:text-[#2A2A2A] bg-[#2A2A2A] hover:bg-white rounded-lg cursor-pointer" onClick={handleCardClick}>
+    <div
+      className="w-[350px] h-[500px] hover:text-[#2A2A2A] bg-[#2A2A2A] hover:bg-white rounded-lg cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="w-[350px] h-[225px] overflow-hidden group relative">
-        <div className="image-container rounded-lg z-10">
+        <div className="image-container rounded-lg">
           <Image
             src={props.image}
             alt="project1"
@@ -27,11 +30,9 @@ export default function ProjectCard(props: ProjectCardProps) {
           />
         </div>
       </div>
-      <div className="rounded-b-lg py-4 px-8 z-50 flex flex-col gap-4 ">
+      <div className="rounded-b-lg py-4 px-8 flex flex-col gap-4 ">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-bold text-left">
-            {props.name}
-          </h3>
+          <h3 className="text-lg font-bold text-left">{props.name}</h3>
           <FaExternalLinkAlt className="text-xl font-bold text-right" />
         </div>
         <p>{props.description}</p>
