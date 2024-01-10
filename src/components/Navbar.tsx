@@ -58,7 +58,7 @@ export default function Navbar() {
     <nav
       className={`${
         scrolled ? "bg-[#161513] h-16" : "bg-transparent"
-      } z-10 text-white fixed top-0 start-0 w-screen border-gray-200`}
+      } z-10 text-white fixed top-0 start-0 w-full border-gray-200`}
     >
       <div className="max-w-screen-xl z-50 flex flex-wrap items-center justify-between mx-auto p-4 px-8">
         <a
@@ -84,7 +84,7 @@ export default function Navbar() {
           <ul
             className={`font-medium flex flex-col p-4 md:p-0 mt-4 border ${
               open ? "border-gray-100" : "border-none"
-            } bg-[#161513] md:bg-transparent rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0`}
+            } md:bg-transparent rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0`}
           >
             <li onClick={() => scrollToTop()} className="cursor-pointer">
               <a

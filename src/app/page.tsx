@@ -1,4 +1,7 @@
+"use client"
 import Image from "next/image";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import {
   FaAws,
   FaCloud,
@@ -25,14 +28,22 @@ import {
 import ProjectCard from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div>
       <div className="bg-[#161513] text-white lg:py-6 flex flex-col gap-24 items-center px-[5%]">
         <section
           id="about"
           className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
+          data-aos="fade-up"
         >
           <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
@@ -93,7 +104,7 @@ export default function Home() {
         </section>
 
         {/* tech stack */}
-        <section id="tech" className="flex flex-col gap-6 items-center w-full">
+        <section data-aos="fade-up" id="tech" className="flex flex-col gap-6 items-center w-full">
           <h1 className="text-[#C5C5C5] text-xl">EXPERIENCED WITH</h1>
           <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-12">
             <TbBrandNextjs className="text-6xl tech-stack hover:scale-110" />
@@ -115,7 +126,7 @@ export default function Home() {
         </section>
 
         {/* projects */}
-        <section id="project" className="w-full flex flex-col gap-8">
+        <section data-aos="fade-up" id="project" className="w-full flex flex-col gap-8">
           <h1 className="project font-bold text-center text-3xl md:text-4xl">
             PROJECTS
           </h1>
@@ -159,7 +170,7 @@ export default function Home() {
         </section>
 
         {/* experience */}
-        <section id="experience" className="w-full flex flex-col gap-8 mb-20">
+        <section data-aos="fade-up" id="experience" className="w-full flex flex-col gap-8 mb-20">
           <h1 className="experience font-bold text-center text-3xl md:text-4xl">
             EXPERIENCE
           </h1>
