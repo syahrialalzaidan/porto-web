@@ -95,7 +95,7 @@ export default function Home() {
             <a
               href="https://drive.google.com/file/d/1zSvh6ha7RvKSnIhRkHxbPDxAbCHEjZBY/view?usp=sharing"
               target="_blank"
-              className="px-7 flex items-center justify-center py-4 text-black bg-white hover:text-white border hover:border-white hover:bg-transparent rounded-full"
+              className="md:px-7 py-2 px-5 flex items-center justify-center md:py-4 text-black bg-white hover:text-white border hover:border-white hover:bg-transparent rounded-full"
             >
               <FaBook className="inline-block mr-2" />
               See My Resume
