@@ -57,7 +57,7 @@ export default function Navbar() {
   return (
     <nav
       className={`${
-        scrolled ? "bg-[#161513] h-20" : "bg-transparent"
+        scrolled ? "bg-[#161513] h-16" : "bg-transparent"
       } z-10 text-white fixed top-0 start-0 w-screen border-gray-200`}
     >
       <div className="max-w-screen-xl z-50 flex flex-wrap items-center justify-between mx-auto p-4 px-8">
@@ -127,7 +127,16 @@ export default function Navbar() {
                 Experience
               </a>
             </li>
-            <li className="cursor-pointer" onClick={() => scrollToBottom()}>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                if (window.innerWidth < 768) {
+                  open && scrollToBottom();
+                } else {
+                  scrollToBottom();
+                }
+              }}
+            >
               <a
                 className="block blur-0 py-2 px-3 rounded md:bg-transparent md:p-0 "
                 aria-current="page"
