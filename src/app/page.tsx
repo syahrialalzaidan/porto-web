@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -47,7 +47,7 @@ export default function Home() {
         >
           <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
-              src={"/iyal.jpg"}
+              src={"/yalz.JPG"}
               fill={true}
               alt="profile"
               className="object-cover w-full h-full"
@@ -104,7 +104,11 @@ export default function Home() {
         </section>
 
         {/* tech stack */}
-        <section data-aos="fade-up" id="tech" className="flex flex-col gap-6 items-center w-full">
+        <section
+          data-aos="fade-up"
+          id="tech"
+          className="flex flex-col gap-6 items-center w-full"
+        >
           <h1 className="text-[#C5C5C5] text-xl">EXPERIENCED WITH</h1>
           <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-12">
             <TbBrandNextjs className="text-6xl tech-stack hover:scale-110" />
@@ -126,7 +130,11 @@ export default function Home() {
         </section>
 
         {/* projects */}
-        <section data-aos="fade-up" id="project" className="w-full flex flex-col gap-8">
+        <section
+          data-aos="fade-up"
+          id="project"
+          className="w-full flex flex-col gap-8"
+        >
           <h1 className="project font-bold text-center text-3xl md:text-4xl">
             PROJECTS
           </h1>
@@ -170,7 +178,11 @@ export default function Home() {
         </section>
 
         {/* experience */}
-        <section data-aos="fade-up" id="experience" className="w-full flex flex-col gap-8 mb-20">
+        <section
+          data-aos="fade-up"
+          id="experience"
+          className="w-full flex flex-col gap-8 mb-20"
+        >
           <h1 className="experience font-bold text-center text-3xl md:text-4xl">
             EXPERIENCE
           </h1>
