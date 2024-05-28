@@ -93,7 +93,7 @@ export default function Home() {
 
           <div className="flex gap-4">
             <a
-              href="https://drive.google.com/file/d/1zSvh6ha7RvKSnIhRkHxbPDxAbCHEjZBY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1XLGrnmoKLUlTQWS12oeBiOSRnsMRVk6h/view?usp=sharing"
               target="_blank"
               className="md:px-7 py-2 px-5 flex items-center justify-center md:py-4 text-black bg-white hover:text-white border hover:border-white hover:bg-transparent rounded-full"
             >
@@ -141,6 +141,13 @@ export default function Home() {
 
           <div className="mb-8 flex flex-wrap items-center gap-10 justify-center">
             <ProjectCard
+              name="EpidemIT"
+              image="/epidemit.png"
+              link="https://main.d1iex298jj9b2k.amplifyapp.com/"
+              description="Contributed to an inclusive IT education platform, integrated AI for enhanced learning and helps people with disabilities, provided financial support, utilized gamification for engagement."
+            />
+
+            <ProjectCard
               name="Klugee"
               image="/klugee.png"
               link="https://klugee.co.id/"
@@ -187,8 +194,22 @@ export default function Home() {
             EXPERIENCE
           </h1>
           <Experience
+            title="Software Engineer Intern at Central Bank of Indonesia"
+            date="Jun 2024 - Aug 2024"
+            logo="/bi.png"
+            description="I have been selected as an intern at the Central Bank of Indonesia from June 12, 2024, to August 5, 2024. During this period, I will be assigned to the Digital Innovation and Development Department to develop applications related to the company's operations."
+          />
+
+          <Experience
+            title="Software Engineer Intern at Mostrans (Kalbe Group)"
+            date="Apr 2024 - Present"
+            logo="/mostrans_1.png"
+            description="I developed an application using Deno with TypeScript, Recoil, React, and GraphQL, where I refactored existing code leveraging refactoring techniques and object-oriented programming (OOP) concepts. By implementing design patterns and adhering to clean code principles, I significantly enhanced code performance and maintainability."
+          />
+
+          <Experience
             title="Software Engineer at Inkubator IT"
-            date="Mar 2023 - Present"
+            date="Mar 2023 - Feb 2024"
             logo="/iit.png"
             description="I've completed five website development projects for external clients and stakeholders in collaboration with fellow developers. These projects spanned diverse domains, addressing needs in mental health, village services, dormitories, and English language courses. I was entrusted by the IT Incubator of the HMIF ITB, overseeing projects with a cumulative value exceeding ±50 million Indonesian Rupiah."
           />
@@ -201,7 +222,7 @@ export default function Home() {
           />
 
           <Experience
-            title="Frontend Developer Intern at Wesclic Indonesia Neotech"
+            title="Web Developer Intern at Wesclic Indonesia Neotech"
             date="Jan 2023 - Apr 2023"
             logo="/wesclic.png"
             description=" I collaborated with a team of 5 developers to create a website for
