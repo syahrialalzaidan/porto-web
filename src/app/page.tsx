@@ -194,10 +194,10 @@ export default function Home() {
             EXPERIENCE
           </h1>
           <Experience
-            title="Software Engineer Intern at Central Bank of Indonesia"
-            date="Jun 2024 - Aug 2024"
-            logo="/bi.png"
-            description="I have been selected as an intern at the Central Bank of Indonesia from June 12, 2024, to August 5, 2024. During this period, I will be assigned to the Digital Innovation and Development Department to develop applications related to the company's operations."
+            title="Software Developer Intern at Telkom Indonesia"
+            date="Sep 2024 - Present"
+            logo="/telkom.png"
+            description="Developed ICA using Next.js where I implemented new features to the system during my internship period"
           />
 
           <Experience
@@ -205,6 +205,13 @@ export default function Home() {
             date="Apr 2024 - Present"
             logo="/mostrans_1.png"
             description="I developed an application using Deno with TypeScript, Recoil, React, and GraphQL, where I refactored existing code leveraging refactoring techniques and object-oriented programming (OOP) concepts. By implementing design patterns and adhering to clean code principles, I significantly enhanced code performance and maintainability."
+          />
+
+          <Experience
+            title="Software Engineer Intern at Central Bank of Indonesia"
+            date="Jun 2024 - Aug 2024"
+            logo="/bi.png"
+            description="Developed BI-Presence, a web-based application that provides a platform for the Bank Indonesia's employees to make attendance reports, leave requests, and other HR-related activities. I was responsible for developing the website using Vue.js, Tailwind CSS, and .NET Core, ensuring a seamless user experience and efficient data management."
           />
 
           <Experience
