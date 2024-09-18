@@ -28,9 +28,27 @@ import {
 import ProjectCard from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Link from "next/link";
-import { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import WAVES from "vanta/dist/vanta.waves.min.js";
 
 export default function Home() {
+  useEffect(() => {
+    WAVES({
+      el: "#vanta",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x20202,
+      shininess: 10.0,
+      waveHeight: 10.5,
+      waveSpeed: 0.75,
+    });
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -39,7 +57,10 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <div className="bg-[#161513] text-white lg:py-6 flex flex-col gap-24 items-center px-[5%]">
+      <div
+        id="vanta"
+        className="text-white bg-black lg:py-6 flex flex-col gap-24 items-center px-[5%]"
+      >
         <section
           id="about"
           className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
