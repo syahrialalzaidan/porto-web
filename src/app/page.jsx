@@ -28,26 +28,35 @@ import {
 import ProjectCard from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min.js";
 
 export default function Home() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+
   useEffect(() => {
-    WAVES({
-      el: "#vanta",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x20202,
-      shininess: 10.0,
-      waveHeight: 10.5,
-      waveSpeed: 0.75,
-    });
-  }, []);
+    if (!vantaEffect) {
+      setVantaEffect(
+        WAVES({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x20202,
+          shininess: 10.0,
+          waveHeight: 10.5,
+          waveSpeed: 0.75,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
   useEffect(() => {
     AOS.init({
@@ -68,7 +77,7 @@ export default function Home() {
         >
           <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
-              src={"/yalz.JPG"}
+              src={"/yal-bi.jpeg"}
               fill={true}
               alt="profile"
               className="object-cover w-full h-full"

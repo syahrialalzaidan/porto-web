@@ -26,14 +26,14 @@ export default function RootLayout({
       <head>
         <title>Mochamad Syahrial Alzaidan</title>
         <link rel="icon" href="/yalz.png" />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          defer
+        />
       </head>
       <body className={poppins.className}>
         <Navbar />
         {children}
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-          strategy="beforeInteractive"
-        />
       </body>
     </html>
   );
