@@ -58,7 +58,7 @@ export default function Navbar() {
     <nav
       className={`${
         scrolled ? "bg-[#161513] h-16" : "bg-transparent"
-      } z-[100] text-white fixed top-0 start-0 w-full border-gray-200 w-screen`}
+      } z-[100] text-white fixed top-0 start-0 border-gray-200 w-screen`}
     >
       <div className="max-w-screen-xl z-50 flex flex-wrap items-center justify-between mx-auto p-4 px-8">
         <a
