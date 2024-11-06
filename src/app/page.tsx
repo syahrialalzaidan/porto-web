@@ -29,35 +29,9 @@ import ProjectCard from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import WAVES from "vanta/dist/vanta.waves.min.js";
+import { Boxes } from "@/components/ui/background-boxes";
 
 export default function Home() {
-  const [vantaEffect, setVantaEffect] = useState(0);
-
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        WAVES({
-          el: "#vanta",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x20202,
-          shininess: 10.0,
-          waveHeight: 10.5,
-          waveSpeed: 0.75,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -65,15 +39,12 @@ export default function Home() {
     });
   }, []);
   return (
-    <div>
-      <div
-        id="vanta"
-        className="text-white bg-black lg:py-6 flex flex-col gap-24 items-center px-[5%]"
-      >
+    <>
+      <div className="text-white bg-[#161513] lg:py-6 flex flex-col gap-24 items-center px-[5%]">
+        <Boxes />
         <section
           id="about"
-          className="flex flex-col items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
-          data-aos="fade-up"
+          className="flex flex-col z-[70] items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
         >
           <div className="w-[210px] aspect-square border-2 border-white bg-slate-300 rounded-full relative overflow-hidden">
             <Image
@@ -306,6 +277,6 @@ export default function Home() {
         <div className="h-[1px] bg-white w-full mt-4"></div>
         <p className="text-center">© Mochamad Syahrial Alzaidan 2024</p>
       </section>
-    </div>
+    </>
   );
 }

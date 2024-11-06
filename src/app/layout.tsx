@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-screen overflow-x-hidden">
       <head>
         <title>Mochamad Syahrial Alzaidan</title>
         <link rel="icon" href="/yalz.png" />
