@@ -28,8 +28,9 @@ import {
 import ProjectCard from "@/components/ProjectCard";
 import Experience from "@/components/Experience";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Boxes } from "@/components/ui/background-boxes";
+import Background from "./Background";
 
 export default function Home() {
   useEffect(() => {
@@ -41,7 +42,8 @@ export default function Home() {
   return (
     <>
       <div className="text-white bg-[#161513] lg:py-6 flex flex-col gap-24 items-center px-[5%]">
-        <Boxes />
+        <Background />
+
         <section
           id="about"
           className="flex flex-col z-[70] items-center justify-center min-h-screen md:h-fit w-full lg:w-2/3 gap-4 md:gap-8"
